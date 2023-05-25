@@ -1,0 +1,24 @@
+.textos1{
+    color: #FF4D6D;
+    font-weight: bold !important;
+}
+.imagem{
+        background-image: url(../../src/assets/images/login.jpg);
+        background-repeat:no-repeat; 
+        width:100vh;
+        min-height: 100vh;
+        background-size: cover;
+        background-position: center;
+}
+
+.text-decorator-none{
+    text-decoration: none;
+    color: white;
+}
+
+.botao{
+    background-color: #FF4D6D !important;
+    color:#FFFFFF !important;
+    border-radius: 15px !important;
+ }
+ 

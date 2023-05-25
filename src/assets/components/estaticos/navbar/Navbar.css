@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Indie+Flower&family=Rubik:wght@500&display=swap');
+
+.cursor{
+    cursor: pointer;
+    color:white;
+}
+
+.text-decorator-none{
+    text-decoration: none;
+    color: white;
+   font-family:'Courier New', Courier, monospace;
+}
