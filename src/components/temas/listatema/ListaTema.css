@@ -1,0 +1,22 @@
+.text-decorator-none{
+    text-decoration: none;
+}
+
+.btnDeletar{
+    background-color: #FF4D6D !important;
+    color:#FFFFFF !important;
+ }
+ 
+ .btnAtualizar{
+     background-color: #FFB3C1 !important;
+     color:#FFFFFF !important;
+     
+ }
+ 
+ .btnAtualizar:hover{
+     background-color:#590D22 !important;
+ }
+ 
+ .btnDeletar:hover{
+     background-color:#590D22 !important;
+ }

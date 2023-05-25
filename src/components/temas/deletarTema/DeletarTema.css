@@ -1,0 +1,17 @@
+.btnSim{
+    background-color: #FF4D6D !important;
+    color:#FFFFFF !important;
+ }
+
+ .btnNao{
+        background-color: #FFB3C1 !important;
+        color:#FFFFFF !important;
+ }
+
+ .btnSim:hover{
+    background-color:#590D22 !important;
+}
+
+.btnNao:hover{
+    background-color:#590D22 !important;
+}
