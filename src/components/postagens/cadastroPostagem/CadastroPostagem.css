@@ -1,0 +1,14 @@
+.topo{
+    margin-top: 20px;
+}
+
+.btnFinalizar{
+    background-color: #FF4D6D !important;
+    color:#FFFFFF !important;
+    border-radius: 15px !important;
+}
+
+.btnFinalizar:hover{
+    background-color: #590D22 !important;
+    transform: scale(1.1);
+}

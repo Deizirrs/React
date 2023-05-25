@@ -1,0 +1,22 @@
+.text-decorator-none{
+    text-decoration: none;
+}
+
+.botaoDeletar{
+   background-color: #FF4D6D !important;
+   color:#FFFFFF !important;
+}
+
+.botaoAtualizar{
+    background-color: #FFB3C1 !important;
+    color:#FFFFFF !important;
+    
+}
+
+.botaoAtualizar:hover{
+    background-color:#590D22 !important;
+}
+
+.botaoDeletar:hover{
+    background-color:#590D22 !important;
+}
