@@ -5,7 +5,7 @@ import './DeletarPostagem.css';
 import {useNavigate, useParams } from 'react-router-dom'
 import useLocalStorage from 'react-use-localstorage';
 import Postagem from '../../../models/Postagem';
-import { buscaId, deleteId } from '../../../service/Service';
+import { buscaId, deleteId } from '../../../services/Service';
 
 function DeletarPostagem() {
     let navigate = useNavigate();
