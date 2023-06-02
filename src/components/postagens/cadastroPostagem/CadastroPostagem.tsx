@@ -1,31 +1,43 @@
 import React, { ChangeEvent, useEffect, useState } from "react";
-import {
-  Container,
-  Typography,
-  TextField,
-  Button,
-  Select,
-  InputLabel,
-  MenuItem,
-  FormControl,
-  FormHelperText,
-} from "@material-ui/core";
+import {Container, Typography, TextField, Button, Select, InputLabel, MenuItem, FormControl, FormHelperText} from "@material-ui/core";
 import "./CadastroPostagem.css";
 import { useNavigate, useParams } from "react-router-dom";
 import Tema from "../../../models/Tema";
 import useLocalStorage from "react-use-localstorage";
 import Postagem from "../../../models/Postagem";
-import { busca, buscaId, post, put } from "../../../services/Service";
+import { busca, buscaId, post, put } from "../../../service/Service";
+import { useSelector } from "react-redux";
+import { UserState } from "../../../store/token/Reducer";
+import { toast } from "react-toastify";
+import User from "../../../models/User";
 
 function CadastroPostagem() {
+
   let navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
   const [temas, setTemas] = useState<Tema[]>([]);
-  const [token, setToken] = useLocalStorage("token");
+  // const [token, setToken] = useLocalStorage("token");
+
+  const token = useSelector<UserState, UserState["tokens"]>(
+    (state) => state.tokens
+  );
+
+  const userId = useSelector<UserState, UserState['id']>(
+    (state) => state.id
+  )
 
   useEffect(() => {
     if (token == "") {
-      alert("Você precisa estar logado");
+      toast.error('Você precisa estar logado!!', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable:false,
+        theme:"colored",
+        progress: undefined,
+      });
       navigate("/login");
     }
   }, [token]);
@@ -39,13 +51,24 @@ function CadastroPostagem() {
     id: 0,
     titulo: "",
     texto: "",
+    data:'',
     tema: null,
+    usuario: null
   });
+
+  const[user, setUser] = useState<User>({
+    id: +userId,
+    nome:'',
+    usuario:'',
+    senha:'',
+    foto:'',
+  })
 
   useEffect(() => {
     setPostagem({
       ...postagem,
       tema: tema,
+      usuario: user
     });
   }, [tema]);
 
@@ -90,7 +113,16 @@ function CadastroPostagem() {
             Authorization: token,
           },
         });
-        alert("Postagem atualizada com sucesso!");
+        toast.success('Postagem atualizada com sucesso!', {
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable:false,
+          theme:"colored",
+          progress: undefined,
+        });
       } catch (error) {
         console.log(`Erro: ${error}`);
         alert("Algo deu errado! Tente novamente!");
@@ -102,10 +134,28 @@ function CadastroPostagem() {
             Authorization: token,
           },
         });
-        alert("Postagem cadastrada com sucesso");
+        toast.success('Postagem cadastrada com sucesso!', {
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable:false,
+          theme:"colored",
+          progress: undefined,
+        });
       } catch (error) {
         console.log(`Erro: ${error}`);
-        alert("Algo deu errado! Tente novamente!");
+        toast.error("Ops... Algo deu Errado!", {
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: false,
+          theme: "colored",
+          progress: undefined,
+        });
       }
     }
     back();

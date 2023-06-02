@@ -1,3 +1,24 @@
+.spinner {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 9px solid;
+    border-color: #dbdcef;
+    border-right-color: #ce3853;
+    animation: spinner-d3wgkg 1s infinite linear;
+}
+
+@keyframes spinner-d3wgkg {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+.boxPost {
+    width: 45%;
+    justify-self: flex-start !important;
+}
+
 .text-decorator-none{
     text-decoration: none;
 }
@@ -8,7 +29,7 @@
 }
 
 .botaoAtualizar{
-    background-color: #FFB3C1 !important;
+    background-color: #d48997 !important;
     color:#FFFFFF !important;
     
 }

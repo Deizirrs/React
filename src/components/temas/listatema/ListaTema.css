@@ -1,5 +1,33 @@
+.spinner {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 9px solid;
+    border-color: #dbdcef;
+    border-right-color: #FF4D6D;
+    animation: spinner-d3wgkg 1s infinite linear;
+}
+
+@keyframes spinner-d3wgkg {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
 .text-decorator-none{
     text-decoration: none;
+}
+
+.btnCadastrar-tema{
+    margin-left: 350px !important;
+    display: flex;
+    margin-top: 20px !important;
+    margin-bottom: 10px !important;
+    background-color: #FF4D6D !important;
+    color:#FFFFFF !important;
+    border-radius: 10px !important;
+    width: 500px;
+
 }
 
 .btnDeletar{

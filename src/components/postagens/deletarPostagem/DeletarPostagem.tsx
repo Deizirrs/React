@@ -5,17 +5,33 @@ import './DeletarPostagem.css';
 import {useNavigate, useParams } from 'react-router-dom'
 import useLocalStorage from 'react-use-localstorage';
 import Postagem from '../../../models/Postagem';
-import { buscaId, deleteId } from '../../../services/Service';
+import { buscaId, deleteId } from '../../../service/Service';
+import { toast } from 'react-toastify';
+import { UserState } from '../../../store/token/Reducer';
+import { useSelector } from 'react-redux';
 
 function DeletarPostagem() {
     let navigate = useNavigate();
     const { id } = useParams<{id: string}>();
-    const [token, setToken] = useLocalStorage('token');
+    // const [token, setToken] = useLocalStorage('token');
     const [post, setPosts] = useState<Postagem>()
+
+  const token = useSelector<UserState, UserState["tokens"]>(
+      (state) => state.tokens
+    );
 
     useEffect(() => {
         if (token == "") {
-            alert("Você precisa estar logado!")
+          toast.error('Você precisa estar logado!', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable:false,
+            theme:"colored",
+            progress: undefined,
+          });
             navigate("/login")
     
         }
@@ -42,7 +58,16 @@ function DeletarPostagem() {
                 'Authorization': token
               }
             });
-            alert('Postagem deletada com sucesso!');
+            toast.success('Postagem deletada com sucesso!', {
+              position: "top-right",
+              autoClose: 2000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: false,
+              draggable:false,
+              theme:"colored",
+              progress: undefined,
+            });
           }
         
           function nao() {
@@ -54,7 +79,7 @@ function DeletarPostagem() {
         <Card variant="outlined" >
           <CardContent style={{backgroundColor:"#fff0f3"}} >
             <Box justifyContent="center">
-              <Typography style={{color: "#C9184A"}} gutterBottom>
+              <Typography style={{color: "#0000"}} gutterBottom>
                 Deseja deletar a Postagem?
               </Typography>
               <Typography style={{color: "#C9184A"}} >

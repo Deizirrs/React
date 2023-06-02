@@ -1,8 +1,10 @@
 interface UserLogin {
     id: number;
     usuario: string;
+    nome:string,
+    foto:string,
     senha: string;
-    token?: string| null;
+    token: string;
 }
 
 export default UserLogin;

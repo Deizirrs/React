@@ -1,11 +1,29 @@
-.titulo{
-    text-align: center;
-    color: #0f0f0f;
+/* .imagemHome{
+    width:600px; 
+    height:500px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 7px #8d1c3c;
+    filter: opacity(60%); 
+    margin-top: 50px;
+    margin-bottom: 100px; 
+    transition: 1.5s ease !important; 
+   
+} */
+
+.imagemHome:hover{
+    filter: grayscale(0%);
+    /* transition: 500ms linear !important; */
+    transform: scale(1.1);
+
+} 
+
+.botaoHome{
+    border-color: white !important;
+    background-color: #C9184A !important;
+    box-shadow: 3px 3px 7px #551023;
+    color: white !important;
 }
 
-.img{
-    width: 500px;
-    height: 500px;
-    display: block;
-    margin: 0 auto;
+.botaoHome:hover{
+    background-color:#5a1327 !important;
 }

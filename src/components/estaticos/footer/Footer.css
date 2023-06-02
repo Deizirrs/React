@@ -1,0 +1,28 @@
+.box1{
+    background-color:#000000;
+    height: 90px;
+}
+
+.box2{
+    background-color:#000000;
+     height:25px;
+}
+
+.redes{
+    font-size: 45px !important;
+    color: #C9184A
+}
+
+.textos{
+    color:#C9184A
+}
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    height: 10px; /* Ajuste o valor conforme necessário */
+    background-color: #f0f0f0; /* Cor de fundo do footer */
+  }
+  
+  

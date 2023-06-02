@@ -1,12 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Indie+Flower&family=Rubik:wght@500&display=swap');
-
-.cursor{
-    cursor: pointer;
-    color:white;
+.boxNav {
+  align-items: center;
+  padding: 2rem;
+  flex-wrap: wrap;
 }
 
-.text-decorator-none{
-    text-decoration: none;
-    color: white;
-   font-family:'Courier New', Courier, monospace;
+.itemMenu {
+  color: var(--color-areia);
+  text-align: center;
+  text-transform: uppercase;
+font-size: 1.5rem;
+font-family: 'Pathway Gothic One', sans-serif;
+  letter-spacing: 1px;
+  min-width: 90px;
+  cursor: "pointer"
 }
+
+.itemMenu:hover {
+  color: var(--color-dark) ;
+}
+
+
+
+
+
+
