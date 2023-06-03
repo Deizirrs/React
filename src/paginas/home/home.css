@@ -1,14 +1,4 @@
-/* .imagemHome{
-    width:600px; 
-    height:500px;
-    border-radius: 20px;
-    box-shadow: 3px 3px 7px #8d1c3c;
-    filter: opacity(60%); 
-    margin-top: 50px;
-    margin-bottom: 100px; 
-    transition: 1.5s ease !important; 
-   
-} */
+
 
 .imagemHome:hover{
     filter: grayscale(0%);
