@@ -1,19 +1,29 @@
+/* .imagemHome{
+    width:600px; 
+    height:500px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 7px #8d1c3c;
+    filter: opacity(60%); 
+    margin-top: 50px;
+    margin-bottom: 100px; 
+    transition: 1.5s ease !important; 
+   
+} */
 
-
-/* .imagemHome:hover{
+.imagemHome:hover{
     filter: grayscale(0%);
-    transition: 500ms linear !important; */
-    /* transform: scale(1.1); */
+    /* transition: 500ms linear !important; */
+    transform: scale(1.1);
 
-/* }  */
+}
 
-/* .botaoHome{ */
+.botaoHome{
     border-color: white !important;
-    background-color: #C9184A !important;
+    background-color: #d31437 !important;
     box-shadow: 3px 3px 7px #551023;
     color: white !important;
-/* } */
+}
 
-/* .botaoHome:hover{ */
-    /* background-color:#5a1327 !important; */
-/* } */ 
+.botaoHome:hover{
+    background-color:#5a1327 !important;
+}
