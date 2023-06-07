@@ -41,14 +41,7 @@ function Login() {
       [e.target.name]: e.target.value,
     });
   }
-
-  // useEffect(() => {
-  //   if (token !== "") {
-  //     dispatch(addToken(token));
-  //     navigate("/home");
-  //   }
-  // }, [token]);
-
+ 
   useEffect(() => {
     if (respUserLogin.token !== '') {
       console.log(respUserLogin.token)
