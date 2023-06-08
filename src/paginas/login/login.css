@@ -1,9 +1,9 @@
 .textos1{
-    color: rgb(167, 17, 92);
+    color: #FF4D6D;
     font-weight: bold !important;
 }
 .imagem{
-        background-image: url('https://imgur.com/gallery/6nEB36J');
+        background-image: url(https://i.imgur.com/u5o5vC8.jpg);
         background-repeat:no-repeat; 
         width:100vh;
         min-height: 100vh;
@@ -17,7 +17,7 @@
 }
 
 .botao{
-    background-color: rgb(167, 17, 92) !important;
+    background-color: #FF4D6D !important;
     color:#FFFFFF !important;
     border-radius: 15px !important;
  }
